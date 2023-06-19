@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title >HB GYM</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/jQuerySPApp.css" />
+  <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"></link>
+      <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+  <body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"></a>
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" id="name"  ></a>
+      <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+           <button class="btn btn-outline-light text-light bg-dark" type="button" onclick="UserLoginService.logout()">Logout</button>
+        </div>
+      </div>
+    </header>
+    <div id="qrcode"></div>
+
+    
+    <button class="btn btn-success btn-lg text-light bg-dark" data-bs-toggle="modal" data-bs-target="#reset-password">reset password</button>
+
+    <div class="modal fade" id="reset-password" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Change password</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+    
+    
+              <form id="change-password-form" >
+                <div class="mb-3">
+                  <label class="form-label">New Password</label>
+                  <input type="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Reset Password</button>
+              </form>
+    
+            </div>
+    
+            
+    
+            <div class="modal-footer"> </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  </body>
+  <script src="js/jquery-3.6.0.min.js"></script>
+
+   <script src="js/jQuerySPApp.js"></script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="js/jquery.validate.min.js"></script>
+
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<script src="js/login-service.js"></script>
+
+<script src="js/util.js"></script>
+
+<script src="js/dashboard-service.js"></script>
+
+
+
+
+
+<script>
+
+
+var token = localStorage.getItem("token");
+  if (token){
+    DashboardService.init();
+
+  }else{
+    window.location.replace("login.html");
+  }
+
+
+
+
+</script>
+</html>
